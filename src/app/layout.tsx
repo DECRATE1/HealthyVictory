@@ -4,9 +4,10 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-export const roboto = Roboto({
+const roboto = Roboto({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {

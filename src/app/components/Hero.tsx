@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { roboto } from "../layout";
 
 export default function Hero() {
   return (
@@ -14,7 +13,7 @@ export default function Hero() {
           className="scale-100"
         />
         <pre
-          className={`${roboto.className} text-[20px] font-light w-[586px] h-[364px] text-wrap break-all overflow-ellipsis`}
+          className={`text-[20px] font-light w-[586px] h-[364px] text-wrap break-all overflow-ellipsis font-roboto`}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { roboto } from "../layout";
 
 export default function NewsItem() {
   return (
@@ -15,9 +14,7 @@ export default function NewsItem() {
         <h2 className="text-[42px] font-black">
           Lorem ipsum sit amet consectetur
         </h2>
-        <pre
-          className={`"break-all w-[698px] h-[224px] text-wrap font-light text-2xl" ${roboto.className}`}
-        >
+        <pre className="break-all w-[698px] h-[224px] text-wrap font-light text-[21px] font-roboto mb-5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
