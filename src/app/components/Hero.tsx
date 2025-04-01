@@ -2,32 +2,38 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="h-[600px] bg-[#121212] text-white text-[42px] font-black flex flex-col">
-      <h2 className="my-[60px] self-center">О НАС</h2>
-      <div className="flex justify-between">
-        <Image
-          src="/image 2.png"
-          width={644}
-          height={368}
-          alt="О нас"
-          className="scale-100"
-        />
-        <pre
-          className={`text-[20px] font-light w-[586px] h-[364px] text-wrap break-all overflow-ellipsis font-roboto`}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.{" "}
-        </pre>
+    <div className="h-[890px] w-full text-white text-[42px] font-black flex flex-col mt-5 relative items-center justify-center gap-20">
+      <div
+        className="absolute inset-0 bg-cover bg-center z-10 h-full"
+        style={{ backgroundImage: "url(image2.png)" }}
+      >
+        <div className="bg-[#3F3D3D85] backdrop-blur-[5px] w-full h-full"></div>
       </div>
+      <h2 className="z-20 font-[800px] text-[48px] text-[#DEFEFF]">О НАС</h2>
+      <div className="flex z-20 items-center w-full justify-center flex-col">
+        <div className="w-full flex items-center justify-center flex-col gap-10">
+          <pre
+            className={`text-[24px] w-[737px] overflow-ellipsis font-raleway font-medium text-center align-middle text-wrap break-all tracking-[-4%]`}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </pre>
+
+          <pre
+            className={`text-[24px] w-[737px] overflow-ellipsis font-raleway font-medium text-center align-middle text-wrap break-all`}
+          >
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua.
+          </pre>
+        </div>
+      </div>
+      <button className="bg-[#DEFEFF] w-[229px] h-[58px] z-20 font-semibold text-[24px] text-black uppercase rounded-full tracking-[-4%]">
+        Подробнее
+      </button>
     </div>
   );
 }
