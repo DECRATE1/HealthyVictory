@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Header() {
   return (
-    <header className="w-full h-[91px] rounded-b-[40px] bg-white items-center text-black flex justify-between list-none absolute z-20 text-[20px] tracking-[-4%]">
+    <header className="w-full h-[91px] rounded-b-[40px] bg-white items-center text-black flex justify-between list-none absolute z-20 text-[20px] tracking-[-4%] hover:drop-shadow-[0px_0px_40.1px_#DEFEFF]">
       <Image
         src={"/logo.png"}
         width={53}
@@ -13,10 +13,10 @@ export default function Header() {
       ></Image>
       <li className="flex gap-24 max-[1441px]:gap-10 max-[1281px]:gap-5 text-[20px] [&>a]:tracking-[-4%] font-semibold">
         <Link href="/">ГЛАВНАЯ</Link>
-        <Link href="/">НОВОСТИ</Link>
-        <Link href="/">О НАС</Link>
+        <Link href="/News">НОВОСТИ</Link>
+        <Link href="/AboutUs">О НАС</Link>
         <Link href="/">КОНТАКТЫ</Link>
-        <Link href="/">ПРИНЯТЬ УЧАСТИЕ</Link>
+        <Link href="/TakePart">ПРИНЯТЬ УЧАСТИЕ</Link>
         <Link href="/">ПРОЕКТЫ</Link>
         <Link href="/">МАТЕРИАЛЫ</Link>
       </li>

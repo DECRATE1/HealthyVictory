@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-screen h-[212px] bg-[#DEFEFF] text-black py-5 self-center">
+    <footer className="w-screen h-fit overflow-hidden bg-[#DEFEFF] text-black py-5 self-center">
       <div className="flex justify-between [&>li]:flex [&>li]:flex-col [&>li]:font-light [&>li]:gap-y-3 [&>li]:text-[24px]">
         <div className="flex size-[100px]">
           <Image
