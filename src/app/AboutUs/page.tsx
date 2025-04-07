@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function AboutUsPage() {
   return (
-    <div className="w-full h-fit flex flex-col items-center min-h-[1095px]">
+    <div className="w-full h-fit flex flex-col items-center min-h-[1095px] max-[1280px]:justify-center">
       <span className="text-black h-10 mt-40 w-full font-raleway font-extrabold text-[48px] tracking-[-4%] flex items-center justify-center mb-16">
         О НАС
       </span>
 
-      <div className="w-full h-fit flex justify-between items-center">
+      <div className="w-full h-fit flex justify-between items-center max-[1280px]:justify-center max-[1280px]:flex-col max-[1280px]:text-center max-[1280px]:gap-5">
         <Image
           src={"/image2.png"}
           width={639}
@@ -32,7 +32,7 @@ export default function AboutUsPage() {
         </pre>
       </div>
 
-      <button className="w-[229px] h-[58px] rounded-[67px] bg-[#DEFEFF] font-raleway tracking-[-4%] text-[24px] font-semibold mt-24">
+      <button className="w-[229px] h-[58px] rounded-[67px] bg-[#DEFEFF] font-raleway tracking-[-4%] text-[24px] font-semibold mt-24 max-[1280px]:mb-10">
         НА ГЛАВНУЮ
       </button>
     </div>

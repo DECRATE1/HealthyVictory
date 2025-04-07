@@ -21,18 +21,18 @@ export default function TakePart() {
   const placeholders = ["Имя", "Телефон", "E-mail", "Сообщение"];
   return (
     <div className="w-full h-fit flex flex-col items-center min-h-[1100px]">
-      <span className="text-black h-10 mt-40 w-full font-raleway font-extrabold text-[48px] tracking-[-4%] flex items-center justify-center mb-16">
+      <span className="text-black h-10 mt-40 w-full font-raleway font-extrabold text-[48px] tracking-[-4%] flex items-center justify-center mb-16 max-[1280px]:text-center">
         ПРИНЯТЬ УЧАСТИЕ
       </span>
 
-      <div className="border-t-2 border-[#8F8F8F] w-full pt-32 "></div>
-      <div className="w-full items-center justify-center flex flex-col gap-5 mb-32">
+      <div className="border-t-2 border-[#8F8F8F] w-full pt-32"></div>
+      <div className="w-full max-[1280px]:screen max-[1280px]:px-4 items-center justify-center flex flex-col gap-5 mb-32">
         {placeholders.map((item, index) => {
           return item !== "Сообщение" ? (
             <input
               key={index}
               placeholder={item}
-              className="border-[1px] border-black w-[1080px] h-[82px] rounded-[50px] pl-10 placeholder-black text-[32px] font-normal tracking-[-6%]"
+              className="border-[1px] border-black w-[1080px] max-[1280px]:w-11/12 h-[82px] rounded-[50px] pl-10 placeholder-black text-[32px] font-normal tracking-[-6%]"
             ></input>
           ) : (
             <textarea
@@ -41,7 +41,7 @@ export default function TakePart() {
               value={message}
               onChange={(e) => handleMessage(e)}
               ref={areaRef}
-              className="border-[1px] border-black w-[1080px] rounded-[50px] pl-10 placeholder-black text-[32px] font-normal tracking-[-6%] resize-none pt-2 pr-10 pb-10 overflow-hidden"
+              className="border-[1px] border-black w-[1080px] max-[1280px]:w-11/12 rounded-[50px] pl-10 placeholder-black text-[32px] font-normal tracking-[-6%] resize-none pt-2 pr-10 pb-10 overflow-hidden"
               style={{ minHeight: "333px" }}
             ></textarea>
           );

@@ -11,8 +11,8 @@ export default function NewsPage() {
     setCurrentPage(pageNumber);
   };
   return (
-    <div className="w-full flex flex-col min-h-screen [&>div]:px-15 [&>header]:px-15 bg-white">
-      <span className="text-black h-10 mt-40 w-full font-raleway font-extrabold text-[48px] tracking-[-4%] flex items-center justify-center mb-16">
+    <div className="w-full flex flex-col min-h-screen [&>div]:px-15 max-[1280px]:px-4 max-[1280px]:[&>div]:px-0 max-[1280px]:items-center max-[1280px]:justify-center [&>header]:px-15 bg-white">
+      <span className="text-black  max-[1280px]:w-full max-[1280px]:text-center h-10 mt-40 w-full font-raleway font-extrabold text-[48px] tracking-[-4%] flex items-center justify-center mb-16">
         НОВОСТИ И СОБЫТИЯ
       </span>
       <div className="w-full h-auto">
@@ -23,7 +23,7 @@ export default function NewsPage() {
         <div className="border-t-2 border-[#8F8F8F] w-full px-32"></div>
       </div>
 
-      <div className="w-full h-40 flex items-center gap-6">
+      <div className="w-full h-40 flex items-center gap-6 max-[1280px]:gap-2">
         {currentPage > 1 ? (
           <FaArrowLeftLong
             size={18}

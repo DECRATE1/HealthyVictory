@@ -4,9 +4,9 @@ import { PiTelegramLogoLight } from "react-icons/pi";
 import { SlSocialVkontakte } from "react-icons/sl";
 export default function Contacts() {
   return (
-    <div className="w-full h-fit flex flex-col items-center min-h-[1085px]">
+    <div className="w-full h-fit flex flex-col items-center min-h-[1085px] ">
       <span className="text-black h-10 mt-40 w-full font-raleway font-extrabold text-[48px] tracking-[-4%] flex items-center justify-center mb-16">
-        ПРИНЯТЬ УЧАСТИЕ
+        КОНТАКТЫ
       </span>
 
       <div className="flex flex-col gap-5 mt-10">

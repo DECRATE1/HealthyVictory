@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="flex flex-col items-center bg-white">
       <body
-        className={`${raleway.className} max-w-[1920px] w-full h-auto flex flex-col grow-3 [&>header]:px-15 [&>footer]:px-15 relative`}
+        className={`${raleway.className} max-w-[1920px] w-full h-auto flex flex-col grow-3 [&>header]:px-15 max-[1280px]:[&>header]:px-5 max-[1280px]:[&>footer]:px-5 [&>footer]:px-15 relative`}
       >
         <Header></Header>
         {children}
