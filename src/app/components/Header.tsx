@@ -1,20 +1,40 @@
 "use client";
+import { client } from "@/sanity/lib/client";
+import { sanityFetch } from "@/sanity/lib/live";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
+
 export default function Header() {
   const [menuIsHide, setMenuIsHide] = useState<boolean>(true);
+
+  const [data, setData] = useState<{
+    PhoneNumber: string;
+    Logo: { asset: { url: string } };
+  }>();
+  useEffect(() => {
+    const getData = async () => {
+      const info = await client.fetch(
+        `*[_type == 'Info'][0]{PhoneNumber, Logo{asset->{url}}}`
+      );
+      setData(info);
+    };
+    getData();
+  }, []);
   return (
     <header className="w-full h-[91px] rounded-b-[40px] bg-white items-center text-black flex justify-between list-none absolute z-20 text-[20px] tracking-[-4%] hover:drop-shadow-[0px_0px_40.1px_#DEFEFF]">
-      <Image
-        src={"/logo.png"}
-        width={53}
-        height={53}
-        alt="Logo"
-        style={{ objectFit: "contain" }}
-        className="drop-shadow-[0_0px_10px_rgba(0,0,0,0.25)]"
-      ></Image>
+      {data && (
+        <Image
+          src={data.Logo.asset.url}
+          width={53}
+          height={53}
+          alt="Logo"
+          style={{ objectFit: "contain" }}
+          className="drop-shadow-[0_0px_10px_rgba(0,0,0,0.25)]"
+        ></Image>
+      )}
       <li className="flex gap-24 max-[1441px]:gap-10 max-[1281px]:gap-5 text-[20px] [&>a]:tracking-[-4%] font-semibold max-[1280px]:hidden">
         <Link href="/">ГЛАВНАЯ</Link>
         <Link href="/News">НОВОСТИ</Link>
@@ -39,7 +59,11 @@ export default function Header() {
           <Link href="/">МАТЕРИАЛЫ</Link>
         </li>
       )}
-      <span className="font-semibold max-[1280px]:hidden">8 999 876 54 32</span>
+      {data && (
+        <span className="font-semibold max-[1280px]:hidden">
+          {data?.PhoneNumber}
+        </span>
+      )}
     </header>
   );
 }
