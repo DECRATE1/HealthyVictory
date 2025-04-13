@@ -64,13 +64,16 @@ export default function MaterialRead() {
                 .toString()
             : null,
           Text: item.Text,
-          Documents: await Promise.all(
-            item.Documents.map(async (item: any) => {
-              return await client.fetch(`*[_id == $fileref][0]`, {
-                fileref: item.asset._ref,
-              });
-            })
-          ),
+          Documents:
+            item.Document ?
+              await Promise.all(
+                item.Documents.map(async (item: any) => {
+                  return await client.fetch(`*[_id == $fileref][0]`, {
+                    fileref: item.asset._ref,
+                  });
+                })
+              )
+            : null,
         };
       });
 

@@ -33,10 +33,13 @@ export default function OurProjectsRead() {
                 .toString()
             : null,
           Text: item.Text,
-          Media: item.Media.map((media: any) => {
-            const [_file, id, extension] = media.asset._ref.split("-");
-            return `https://cdn.sanity.io/files/${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}/${process.env.NEXT_PUBLIC_SANITY_DATASET}/${id}.${extension}`;
-          }),
+          Media:
+            item.Media ?
+              item.Media.map((media: any) => {
+                const [_file, id, extension] = media.asset._ref.split("-");
+                return `https://cdn.sanity.io/files/${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}/${process.env.NEXT_PUBLIC_SANITY_DATASET}/${id}.${extension}`;
+              })
+            : null,
         };
       });
       setData(data);
