@@ -26,14 +26,16 @@ export default function Header() {
   return (
     <header className="w-full h-[91px] rounded-b-[40px] bg-white items-center text-black flex justify-between list-none absolute z-20 text-[20px] tracking-[-4%] hover:drop-shadow-[0px_0px_40.1px_#DEFEFF]">
       {data && (
-        <Image
-          src={data.Logo.asset.url}
-          width={53}
-          height={53}
-          alt="Logo"
-          style={{ objectFit: "contain" }}
-          className="drop-shadow-[0_0px_10px_rgba(0,0,0,0.25)]"
-        ></Image>
+        <Link href={"/"} className="cursor-pointer">
+          <Image
+            src={data.Logo.asset.url}
+            width={53}
+            height={53}
+            alt="Logo"
+            style={{ objectFit: "contain" }}
+            className="drop-shadow-[0_0px_10px_rgba(0,0,0,0.25)]"
+          ></Image>
+        </Link>
       )}
       <li className="flex gap-24 min-[1280px]:gap-10 min-[1920px]:gap-24  text-[20px] [&>a]:tracking-[-4%] font-semibold max-[1280px]:hidden">
         <Link href="/">ГЛАВНАЯ</Link>
