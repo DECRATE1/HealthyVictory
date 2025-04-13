@@ -33,6 +33,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  crossOrigin: "anonymous",
 };
 
 export default nextConfig;

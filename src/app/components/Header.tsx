@@ -35,14 +35,14 @@ export default function Header() {
           className="drop-shadow-[0_0px_10px_rgba(0,0,0,0.25)]"
         ></Image>
       )}
-      <li className="flex gap-24 max-[1441px]:gap-10 max-[1281px]:gap-5 text-[20px] [&>a]:tracking-[-4%] font-semibold max-[1280px]:hidden">
+      <li className="flex gap-24 min-[1280px]:gap-10 min-[1920px]:gap-24  text-[20px] [&>a]:tracking-[-4%] font-semibold max-[1280px]:hidden">
         <Link href="/">ГЛАВНАЯ</Link>
         <Link href="/News">НОВОСТИ</Link>
         <Link href="/AboutUs">О НАС</Link>
         <Link href="/Contacts">КОНТАКТЫ</Link>
         <Link href="/TakePart">ПРИНЯТЬ УЧАСТИЕ</Link>
-        <Link href="/">ПРОЕКТЫ</Link>
-        <Link href="/">МАТЕРИАЛЫ</Link>
+        <Link href="/OurProjects">ПРОЕКТЫ</Link>
+        <Link href="/Materials">МАТЕРИАЛЫ</Link>
       </li>
       <FaBars
         className="min-[1280px]:hidden fill-[#93FBFF] size-8"
@@ -55,8 +55,8 @@ export default function Header() {
           <Link href="/AboutUs">О НАС</Link>
           <Link href="/Contacts">КОНТАКТЫ</Link>
           <Link href="/TakePart">ПРИНЯТЬ УЧАСТИЕ</Link>
-          <Link href="/">ПРОЕКТЫ</Link>
-          <Link href="/">МАТЕРИАЛЫ</Link>
+          <Link href="/OurProjects">ПРОЕКТЫ</Link>
+          <Link href="/Materials">МАТЕРИАЛЫ</Link>
         </li>
       )}
       {data && (
