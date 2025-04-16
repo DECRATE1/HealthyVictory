@@ -31,14 +31,16 @@ export default function ProjectItem({
         </span>
       </div>
 
-      <div className="max-[1281px]:w-[500px] h-full max-[1280px]:flex  max-[1280px]:flex-col max-[1280px]:items-center max-[1280px]:justify-center max-[1280px]:gap-10  max-[1280px]:text-center max-[1280px]:w-full">
+      <div className="max-[1281px]:w-[500px] h-full max-[1280px]:flex  max-[1280px]:flex-col max-[1280px]:items-center max-[1280px]:justify-center max-[1280px]:gap-10 max-[1280px]:text-center max-[1280px]:w-full">
         <h2 className="text-[42px] font-extrabold max-[1280px]:text-[24px]">
           {title}
         </h2>
         <pre className="break-all min-[1281px]:w-[698px] h-[224px] text-wrap font-light text-[24px] font-raleway mb-5 tracking-[-4%] max-[1281px]:text-[20px] break-words max-[1280px]:px-4 max-[1280px]:hidden">
           {text}
         </pre>
-        <div className="max-[450px]:w-full max-[450px]:h-[400px] h-[500px] flex relative min-[1280px]:hidden">
+
+        {/*Mobile Phone*/}
+        <div className="flex relative min-[1280px]:hidden max-[800px]:w-full h-[350px]">
           {pre && (
             <Image
               src={pre}

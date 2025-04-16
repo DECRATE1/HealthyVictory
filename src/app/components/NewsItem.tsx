@@ -34,18 +34,22 @@ export default function NewsItem({
         <h2 className="text-[42px] font-extrabold max-[1280px]:text-[24px]">
           {title}
         </h2>
-        <pre className="break-all min-[1281px]:w-[698px] h-[224px] text-wrap font-light text-[24px] font-raleway mb-5 tracking-[-4%] max-[1281px]:text-[20px] break-words max-[1280px]:px-4 max-[1280px]:hidden">
+        <span className="break-all min-[1281px]:w-[698px] h-[224px] text-wrap font-light text-[24px] font-raleway mb-5 tracking-[-4%] max-[1281px]:text-[20px] break-words max-[1280px]:px-4 max-[1280px]:hidden">
           {text}
-        </pre>
-        <div className="max-[450px]:w-full max-[450px]:h-[400px] h-[500px] flex relative min-[1280px]:hidden">
-          <Image
-            src={pre}
-            width={561}
-            height={386}
-            alt="Square"
-            className="object-center rounded-[50px] flex w-full"
-          ></Image>
-          <div className="flex items-center flex-col h-20 absolute rounded-b-[50px] bottom-0 bg-white/10 backdrop-blur-xl justify-center">
+        </span>
+
+        {/*Mobile Phone*/}
+        <div className="flex relative min-[1280px]:hidden max-[800px]:w-full h-[350px]">
+          {pre && (
+            <Image
+              src={pre}
+              width={561}
+              height={386}
+              alt="Square"
+              className="object-center rounded-[50px] flex w-full"
+            ></Image>
+          )}
+          <div className="flex items-center w-full flex-col h-20 absolute rounded-b-[50px] bottom-0 bg-white/10 backdrop-blur-xl justify-center">
             <span className="break-all min-[1281px]:w-[698px] h-[224px] max-[1280px]:max-h-32 max-[1280px]:h-fit max-[1280px]:line-clamp-2 text-white max-[1280px]:text-[12px] flex truncate overflow-hidden text-wrap font-light text-[24px] font-raleway max-[1280px]:mb-0 mb-5 tracking-[-4%] max-[1281px]:text-[20px] break-words max-[1280px]:px-4">
               {text}
             </span>
@@ -54,7 +58,7 @@ export default function NewsItem({
             </span>
           </div>
         </div>
-        <div className="flex self-start">
+        <div className="flex items-center">
           <Link
             href={`/NewsRead/${id}`}
             className="w-[229px] h-[58px] items-center justify-center flex text-2xl font-semibold uppercase rounded-full bg-[#DEFEFF] hover:border-[1px] hover:bg-white hover:drop-shadow-[0px_0px_40.1px_#DEFEFF]"

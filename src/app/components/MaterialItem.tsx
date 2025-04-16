@@ -38,6 +38,8 @@ export default function MaterialItem({
         <pre className="break-all min-[1281px]:w-[698px] h-[224px] text-wrap font-light text-[24px] font-raleway mb-5 tracking-[-4%] max-[1281px]:text-[20px] break-words max-[1280px]:px-4 max-[1280px]:hidden">
           {text}
         </pre>
+
+        {/* Mobile Phone */}
         <div className="max-[450px]:w-full max-[450px]:h-[400px] h-[500px] flex relative min-[1280px]:hidden">
           {pre && (
             <Image
