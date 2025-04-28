@@ -42,7 +42,7 @@ export default function Hero() {
         </div>
       </div>
       <Link
-        href={"/"}
+        href={"/AboutUs"}
         className="bg-[#DEFEFF] w-[229px] h-[58px] z-20 font-semibold text-[24px] text-black uppercase rounded-full tracking-[-4%] items-center flex justify-center"
       >
         Подробнее

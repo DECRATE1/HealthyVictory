@@ -30,7 +30,7 @@ export default function NewsItem({
         </span>
       </div>
 
-      <div className="max-[1281px]:w-[500px] h-full max-[1280px]:flex  max-[1280px]:flex-col max-[1280px]:items-center max-[1280px]:justify-center max-[1280px]:gap-10  max-[1280px]:text-center max-[1280px]:w-full">
+      <div className="max-[1281px]:w-[500px] h-full max-[1280px]:flex max-[1280px]:flex-col max-[1280px]:items-center max-[1280px]:justify-center max-[1280px]:gap-10  max-[1280px]:text-center max-[1280px]:w-full gap-20">
         <h2 className="text-[42px] font-extrabold max-[1280px]:text-[24px]">
           {title}
         </h2>
@@ -58,10 +58,11 @@ export default function NewsItem({
             </span>
           </div>
         </div>
-        <div className="flex items-center">
+
+        <div className="flex items-center mt-52">
           <Link
             href={`/NewsRead/${id}`}
-            className="w-[229px] h-[58px] items-center justify-center flex text-2xl font-semibold uppercase rounded-full bg-[#DEFEFF] hover:border-[1px] hover:bg-white hover:drop-shadow-[0px_0px_40.1px_#DEFEFF]"
+            className="w-[229px] h-[58px]  items-center justify-center flex text-2xl font-semibold uppercase rounded-full bg-[#DEFEFF] hover:border-[1px] hover:bg-white hover:drop-shadow-[0px_0px_40.1px_#DEFEFF]"
           >
             Подробнее
           </Link>

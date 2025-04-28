@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import NewsItem from "./NewsItem";
 import PagesList from "./PagesList";
 import { client } from "@/sanity/lib/client";
+import Link from "next/link";
 
 export default function NewsList() {
   const [news, setNews] = useState<
@@ -45,9 +46,12 @@ export default function NewsList() {
         })}
       </div>
 
-      <button className="rounded-full text-black text-[24px] tracking-[-4%] font-semibold bg-[#DEFEFF] w-[229px] h-[58px] my-10 self-start max-[1280px]:self-auto">
+      <Link
+        href={"/News"}
+        className="rounded-full text-black text-[24px] tracking-[-4%] font-semibold bg-[#DEFEFF] w-[229px] h-[58px] my-10 self-start max-[1280px]:self-auto items-center justify-center flex"
+      >
         ВСЕ НОВОСТИ
-      </button>
+      </Link>
     </div>
   );
 }
