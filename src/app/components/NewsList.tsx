@@ -22,7 +22,6 @@ export default function NewsList() {
         "*[_type =='News']{Title, Text, Preview{asset -> {url}}, Date, _id}"
       );
       setNews(news);
-      console.log(news);
     };
     getNews();
   }, []);

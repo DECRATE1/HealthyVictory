@@ -7,6 +7,16 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 
+const links: { [index: string]: string } = {
+  ГЛАВНАЯ: "/",
+  НОВОСТИ: "/News",
+  ОНАС: "/AboutUs",
+  КОНТАКТЫ: "/Contacts",
+  ПРИНЯТЬУЧАСТИЕ: "/TakePart",
+  ПРОЕКТЫ: "/OurProjects",
+  МАТЕРИАЛЫ: "/Materials",
+};
+
 export default function Header() {
   const [menuIsHide, setMenuIsHide] = useState<boolean>(true);
 
@@ -52,13 +62,40 @@ export default function Header() {
       ></FaBars>
       {!menuIsHide && (
         <li className="flex gap-24 max-[1441px]:gap-10 max-[1281px]:gap-5 text-[20px] [&>a]:tracking-[-4%] font-semibold absolute bg-white flex-col w-full inset-0 py-10 mt-13 -z-10 items-center transition-all duration-500 overflow-hidden h-fit">
-          <Link href="/">ГЛАВНАЯ</Link>
-          <Link href="/News">НОВОСТИ</Link>
-          <Link href="/AboutUs">О НАС</Link>
-          <Link href="/Contacts">КОНТАКТЫ</Link>
-          <Link href="/TakePart">ПРИНЯТЬ УЧАСТИЕ</Link>
-          <Link href="/OurProjects">ПРОЕКТЫ</Link>
-          <Link href="/Materials">МАТЕРИАЛЫ</Link>
+          {links &&
+            Object.keys(links).map((key: string, index) => {
+              if (key === "ПРИНЯТЬУЧАСТИЕ") {
+                return (
+                  <Link
+                    key={index}
+                    className="w-full h-8 flex text-center items-center justify-center"
+                    href={links[key]}
+                  >
+                    ПРИНЯТЬ УЧАСТИЕ
+                  </Link>
+                );
+              } else if (key === "ОНАС") {
+                return (
+                  <Link
+                    key={index}
+                    className="w-full h-8 flex text-center items-center justify-center"
+                    href={links[key]}
+                  >
+                    О НАС
+                  </Link>
+                );
+              } else {
+                return (
+                  <Link
+                    key={index}
+                    className="w-full h-8 flex text-center items-center justify-center"
+                    href={links[key]}
+                  >
+                    {key}
+                  </Link>
+                );
+              }
+            })}
         </li>
       )}
       {data && (

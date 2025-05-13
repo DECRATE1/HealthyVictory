@@ -59,10 +59,10 @@ export default function NewsItem({
           </div>
         </div>
 
-        <div className="flex items-center mt-52">
+        <div className="flex items-center mt-10">
           <Link
             href={`/NewsRead/${id}`}
-            className="w-[229px] h-[58px]  items-center justify-center flex text-2xl font-semibold uppercase rounded-full bg-[#DEFEFF] hover:border-[1px] hover:bg-white hover:drop-shadow-[0px_0px_40.1px_#DEFEFF]"
+            className="w-[229px] h-[58px] items-center justify-center flex text-2xl font-semibold uppercase rounded-full bg-[#DEFEFF] hover:border-[1px] hover:bg-white hover:drop-shadow-[0px_0px_40.1px_#DEFEFF]"
           >
             Подробнее
           </Link>

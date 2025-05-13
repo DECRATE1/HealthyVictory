@@ -14,7 +14,7 @@ export default function AboutUs() {
       const data = await client.fetch(
         "*[_type == 'AboutUs'][0]{Big, SecondImage{asset->{url}}}"
       );
-      console.log(data);
+
       setInfo(data);
     };
     getInfo();
@@ -32,7 +32,7 @@ export default function AboutUs() {
             width={639}
             height={427}
             alt="О нас"
-            className="w-[639px] h-[427px] rounded-[50px] object-cover"
+            className="w-[639px] h-[427px] rounded-[50px] object-cover px-4"
           ></Image>
 
           <pre className="font-raleway font-normal tracking-[-4%] text-[24px] text-wrap break-words w-[50%] h-fit">
