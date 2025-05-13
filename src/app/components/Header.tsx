@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 
 const links: { [index: string]: string } = {
-  ГЛАВНАЯ: "/",
   НОВОСТИ: "/News",
   ОНАС: "/AboutUs",
   КОНТАКТЫ: "/Contacts",
@@ -48,7 +47,6 @@ export default function Header() {
         </Link>
       )}
       <li className="flex gap-24 min-[1280px]:gap-10 min-[1920px]:gap-24  text-[20px] [&>a]:tracking-[-4%] font-semibold max-[1280px]:hidden">
-        <Link href="/">ГЛАВНАЯ</Link>
         <Link href="/News">НОВОСТИ</Link>
         <Link href="/AboutUs">О НАС</Link>
         <Link href="/Contacts">КОНТАКТЫ</Link>
