@@ -76,6 +76,7 @@ export default function Header() {
               } else if (key === "ОНАС") {
                 return (
                   <Link
+                    onClick={() => setMenuIsHide(false)}
                     key={index}
                     className="w-full h-8 flex text-center items-center justify-center"
                     href={links[key]}
@@ -86,6 +87,7 @@ export default function Header() {
               } else {
                 return (
                   <Link
+                    onClick={() => setMenuIsHide(false)}
                     key={index}
                     className="w-full h-8 flex text-center items-center justify-center"
                     href={links[key]}
