@@ -43,7 +43,6 @@ export default function Header() {
             alt="Logo"
             style={{ objectFit: "contain" }}
             className="drop-shadow-[0_0px_10px_rgba(0,0,0,0.25)]"
-            onClick={() => setMenuIsHide(false)}
           ></Image>
         </Link>
       )}
@@ -66,6 +65,7 @@ export default function Header() {
               if (key === "ПРИНЯТЬУЧАСТИЕ") {
                 return (
                   <Link
+                    onClick={() => setMenuIsHide(false)}
                     key={index}
                     className="w-full h-8 flex text-center items-center justify-center"
                     href={links[key]}
