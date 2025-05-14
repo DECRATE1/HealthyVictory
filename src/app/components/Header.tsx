@@ -65,7 +65,7 @@ export default function Header() {
               if (key === "ПРИНЯТЬУЧАСТИЕ") {
                 return (
                   <Link
-                    onClick={() => setMenuIsHide(false)}
+                    onClick={() => setMenuIsHide(true)}
                     key={index}
                     className="w-full h-8 flex text-center items-center justify-center"
                     href={links[key]}
@@ -76,7 +76,7 @@ export default function Header() {
               } else if (key === "ОНАС") {
                 return (
                   <Link
-                    onClick={() => setMenuIsHide(false)}
+                    onClick={() => setMenuIsHide(true)}
                     key={index}
                     className="w-full h-8 flex text-center items-center justify-center"
                     href={links[key]}
@@ -87,7 +87,7 @@ export default function Header() {
               } else {
                 return (
                   <Link
-                    onClick={() => setMenuIsHide(false)}
+                    onClick={() => setMenuIsHide(true)}
                     key={index}
                     className="w-full h-8 flex text-center items-center justify-center"
                     href={links[key]}
