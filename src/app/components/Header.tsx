@@ -35,7 +35,11 @@ export default function Header() {
   return (
     <header className="w-full h-[91px] rounded-b-[40px] bg-white items-center text-black flex justify-between list-none absolute z-20 text-[20px] tracking-[-4%] hover:drop-shadow-[0px_0px_40.1px_#DEFEFF]">
       {data && (
-        <Link href={"/"} className="cursor-pointer">
+        <Link
+          href={"/"}
+          className="cursor-pointer"
+          onClick={() => setMenuIsHide(true)}
+        >
           <Image
             src={data.Logo.asset.url}
             width={53}
